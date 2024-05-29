@@ -10,7 +10,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import javax.management.relation.Role;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,7 +27,6 @@ public class User {
     private String username;
 
     @NotBlank
-    @Size(min = ValidationConstraints.EMAIL_MIN_LENGTH, max = ValidationConstraints.EMAIL_MAX_LENGTH)
     @Email
     private String email;
 

@@ -13,7 +13,7 @@ public class TokenResponse {
     @NotBlank
     private String token;
     @NotBlank
-    private String tokenType = "Bearer";
+    public String tokenType;
     @NotBlank
     private String id;
     @NotBlank
