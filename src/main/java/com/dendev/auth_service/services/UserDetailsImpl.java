@@ -1,7 +1,6 @@
 package com.dendev.auth_service.services;
 
 import java.io.Serial;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Objects;
@@ -42,7 +41,7 @@ public class UserDetailsImpl implements UserDetails {
     private List<GrantedAuthority> generateAuthorities(User user) {
         return user.getRoles()
                 .stream()
-                .map(role -> new SimpleGrantedAuthority(role.getRoleName()))
+                .map(role -> new SimpleGrantedAuthority(role.getName().toString()))
                 .collect(Collectors.toList());
     }
 
